@@ -12,6 +12,8 @@
 		AE16F0F01CF42753008400BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE16F0EE1CF42753008400BD /* Main.storyboard */; };
 		AE16F0F21CF42754008400BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE16F0F11CF42754008400BD /* Assets.xcassets */; };
 		AE16F0F51CF42754008400BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE16F0F31CF42754008400BD /* LaunchScreen.storyboard */; };
+		AE16F0FD1CF43196008400BD /* VCHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE16F0FC1CF43196008400BD /* VCHome.swift */; };
+		AE16F0FF1CF43222008400BD /* VCMyCam.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE16F0FE1CF43222008400BD /* VCMyCam.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		AE16F0F11CF42754008400BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE16F0F41CF42754008400BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE16F0F61CF42754008400BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE16F0FC1CF43196008400BD /* VCHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCHome.swift; sourceTree = "<group>"; };
+		AE16F0FE1CF43222008400BD /* VCMyCam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMyCam.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				AE16F0EA1CF42753008400BD /* AppDelegate.swift */,
 				AE16F0EC1CF42753008400BD /* ViewController.swift */,
+				AE16F0FC1CF43196008400BD /* VCHome.swift */,
+				AE16F0FE1CF43222008400BD /* VCMyCam.swift */,
 				AE16F0EE1CF42753008400BD /* Main.storyboard */,
 				AE16F0F11CF42754008400BD /* Assets.xcassets */,
 				AE16F0F31CF42754008400BD /* LaunchScreen.storyboard */,
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE16F0FF1CF43222008400BD /* VCMyCam.swift in Sources */,
+				AE16F0FD1CF43196008400BD /* VCHome.swift in Sources */,
 				AE16F0ED1CF42753008400BD /* ViewController.swift in Sources */,
 				AE16F0EB1CF42753008400BD /* AppDelegate.swift in Sources */,
 			);
