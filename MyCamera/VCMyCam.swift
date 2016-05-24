@@ -37,7 +37,7 @@ class VCMyCam: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     // MARK: Delegates
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        imageView.image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
