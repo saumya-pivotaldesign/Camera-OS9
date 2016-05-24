@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Camera-->
@@ -17,17 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-fD-bFg">
-                                <rect key="frame" x="20" y="72" width="107" height="30"/>
-                                <state key="normal" title="Show Photos"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-fD-bFg">
+                                <rect key="frame" x="20" y="72" width="236" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UZc-ig-XFp"/>
+                                    <constraint firstAttribute="width" constant="236" id="ydo-FL-fIn"/>
+                                </constraints>
+                                <state key="normal" title="Show Photos from Photo Library"/>
                                 <connections>
                                     <action selector="onShowExistingPhotosFromPhotoLib:" destination="kjK-yq-TBn" eventType="touchUpInside" id="Aj1-L3-wTh"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Axr-9h-YBj">
+                                <rect key="frame" x="20" y="110" width="560" height="290"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Axr-9h-YBj" firstAttribute="leading" secondItem="D5c-tO-QHm" secondAttribute="leadingMargin" id="Dnq-ZW-aGs"/>
+                            <constraint firstItem="eQ5-w9-XS6" firstAttribute="top" secondItem="Axr-9h-YBj" secondAttribute="bottom" constant="200" id="IwW-GA-R6H"/>
+                            <constraint firstItem="Fzo-fD-bFg" firstAttribute="top" secondItem="qCs-p6-tL8" secondAttribute="bottom" constant="8" id="V5D-bT-yCm"/>
+                            <constraint firstItem="Axr-9h-YBj" firstAttribute="top" secondItem="Fzo-fD-bFg" secondAttribute="bottom" constant="8" id="ih2-g5-OB2"/>
+                            <constraint firstItem="Fzo-fD-bFg" firstAttribute="leading" secondItem="D5c-tO-QHm" secondAttribute="leadingMargin" id="nda-YM-Kw4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Axr-9h-YBj" secondAttribute="trailing" id="o9q-8l-JEe"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Camera" id="ZnZ-hJ-PtM"/>
+                    <navigationItem key="navigationItem" title="My Camera" id="ZnZ-hJ-PtM">
+                        <barButtonItem key="rightBarButtonItem" title="Camera" id="vvW-ZH-ARS">
+                            <connections>
+                                <action selector="onShowExistingPhotosFromCamera:" destination="kjK-yq-TBn" id="3dx-pR-gIO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="Axr-9h-YBj" id="B3Q-cG-dvL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezE-cK-YHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,7 +72,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="RLK-CA-64M">
-                        <barButtonItem key="rightBarButtonItem" title="Camera" id="isu-Ws-Khv">
+                        <barButtonItem key="rightBarButtonItem" title="Photos" id="isu-Ws-Khv">
                             <connections>
                                 <segue destination="kjK-yq-TBn" kind="show" id="mjf-qR-D4q"/>
                             </connections>
